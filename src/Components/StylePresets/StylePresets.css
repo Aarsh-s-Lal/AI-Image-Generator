@@ -1,0 +1,74 @@
+.style-presets {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.style-presets h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.style-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 15px;
+  background: var(--card-bg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.style-card:hover {
+  background: var(--card-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(222, 27, 137, 0.3);
+}
+
+.style-card.selected {
+  border-color: #DE1B89;
+  background: var(--card-selected-bg);
+  box-shadow: 0 0 20px rgba(222, 27, 137, 0.5);
+}
+
+.style-emoji {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.style-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .style-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .style-card {
+    padding: 12px 8px;
+  }
+  
+  .style-emoji {
+    font-size: 20px;
+  }
+  
+  .style-name {
+    font-size: 10px;
+  }
+}
